@@ -1,6 +1,6 @@
 # JestTest2
 Demonstrates jest and react-native basic configuration. *DOESN'T WORK*
 
-´npm test'
+<pre>npm test</pre>
 gives the error
-'SyntaxError: Unexpected token import'
+<pre>'SyntaxError: Unexpected token import'</pre>
