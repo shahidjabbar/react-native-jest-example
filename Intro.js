@@ -16,11 +16,34 @@ console.log(p.toString());
 import {StackNavigator} from 'react-navigation';
 
 
-const BasicApp = StackNavigator({
+class MyHomeScreen extends React.Component {
+    static navigationOptions = {
+	title: 'Home',
+    }
+
+	render() {
+	    return (
+      <Button
+      onPress={() => this.props.navigation.navigate('Profile', {name: 'Lucy'})}
+        title="Go to Lucy's profile"
+      />
+		    );
+	}
+}
+
+const ModalStack = StackNavigator({
+	Home: {
+	    screen: MyHomeScreen,
+	}
+    });
+
+
+
+/*const BasicApp = StackNavigator({
     Main: {screen: MainScreen},
     Profile: {screen: ProfileScreen},
 });
-
+*/
 
 const styles = StyleSheet.create({
     container: {
